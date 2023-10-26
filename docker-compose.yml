@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  webapiautenticazioneutenti:
+    image: ${DOCKER_REGISTRY-}webapiautenticazioneutenti
+    build:
+      context: .
+      dockerfile: WebAPIAutenticazioneUtenti\Dockerfile
+
+  webapigestionecarrello:
+    image: ${DOCKER_REGISTRY-}webapigestionecarrello
+    build:
+      context: .
+      dockerfile: WebAPIGestioneCarrello\Dockerfile
+
+
+  webapimongodb:
+    image: ${DOCKER_REGISTRY-}webapimongodb
+    build:
+      context: .
+      dockerfile: WebAPIMongoDB\Dockerfile
+
